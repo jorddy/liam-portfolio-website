@@ -1,7 +1,128 @@
+<script>
+  import { page } from "$app/stores";
+</script>
+
+<svelte:head>
+  <title>Liam Johnston Creative Marketer</title>
+  <meta
+    name="description"
+    content="A Newcastle-Upon-Tyne based marketing designer currently looking for my next big role. I'm passionate about pushing the limits of brands through creative marketing strategies and striking design"
+  />
+  <link rel="canonical" href={$page.url.origin + $page.url.pathname} />
+</svelte:head>
+
 <slot />
 
 <style global>
+  @import "@fontsource/darker-grotesque/900.css";
+  @import "@fontsource/jost/400.css";
+  @import "@fontsource/jost/600.css";
+
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --font-display: "Darker Grotesque";
+    --font-body: "Jost", sans-serif;
+    --font-14: 1.4rem;
+    --font-18: 1.8rem;
+    --font-24: 2.4rem;
+    --font-36: 3.6rem;
+    --font-48: 4.8rem;
+    --font-68: 6.8rem;
+
+    --colour-brand: hsl(42, 89%, 49%);
+    --colour-bg: hsl(225, 39%, 17%);
+    --colour-bg-muted: hsl(225, 39%, 7%);
+    --colour-accent: hsl(13, 71%, 60%);
+    --colour-accent-muted: hsl(13, 71%, 50%);
+    --colour-white: hsl(90, 7%, 94%);
+
+    --spacing-4: 0.4rem;
+    --spacing-8: 0.8rem;
+    --spacing-12: 1.2rem;
+    --spacing-16: 1.6rem;
+    --spacing-20: 2rem;
+    --spacing-24: 2.4rem;
+    --spacing-32: 3.2rem;
+    --spacing-40: 4rem;
+
+    --radius-base: var(--spacing-12);
+  }
+
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
   body {
-    font-family: sans-serif;
+    font-family: var(--font-body);
+    font-size: var(--font-18);
+    line-height: 1.5;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Darker Grotesque", sans-serif;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: var(--font-68);
+  }
+  h2 {
+    font-size: var(--font-48);
+  }
+  h3 {
+    font-size: var(--font-36);
+  }
+  h4 {
+    font-size: var(--font-24);
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+    font-size: 1rem;
+  }
+
+  button {
+    border: none;
+    background: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    width: min(90%, 1100px);
+    margin-inline: auto;
   }
 </style>

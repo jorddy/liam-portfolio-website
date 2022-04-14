@@ -1,0 +1,23 @@
+---
+logo: ""
+navigation:
+  - ""
+  - ""
+  - ""
+  - ""
+instagram: ""
+linkedin: ""
+hero-heading: ""
+hero-description: ""
+hero-button: ""
+about-heading: ""
+about-sub-heading: ""
+about-description: ""
+footer-heading: ""
+footer-email: ""
+footer-location: ""
+footer-sub-heading: ""
+footer-description: ""
+copyright: ""
+cv: ""
+---
