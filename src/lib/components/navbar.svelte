@@ -2,6 +2,7 @@
   import { page } from "$app/stores";
   import Icon from "$lib/components/icon.svelte";
   import { fly } from "svelte/transition";
+  import Social from "./social.svelte";
 
   export let content: Site;
 
@@ -22,31 +23,14 @@
       on:click={() => (menuOpen = true)}
       aria-label="Open the mobile menu"
     >
-      <Icon name="menu" width={48} height={48} colour="var(--colour-white)" />
+      <Icon name="menu" width={32} height={32} colour="var(--colour-white)" />
     </button>
     <a href="/">
       <img src={content.data.logo} alt="Liam Johnston logo" />
     </a>
   </div>
 
-  <ul>
-    <li>
-      <a
-        rel="external"
-        href={content.data.instagram}
-        aria-label="Link to my Instagram page"
-        ><Icon name="instagram" width={32} height={32} /></a
-      >
-    </li>
-    <li>
-      <a
-        rel="external"
-        href={content.data.linkedin}
-        aria-label="Link to my Instagram page"
-        ><Icon name="linkedin" width={32} height={32} /></a
-      >
-    </li>
-  </ul>
+  <Social instagram={content.data.instagram} linkedin={content.data.linkedin} />
 </header>
 
 {#if menuOpen}
@@ -135,6 +119,10 @@
     button {
       display: block;
     }
+    img {
+      width: 6rem;
+      height: 6rem;
+    }
   }
 
   img {
@@ -145,11 +133,6 @@
   img:hover,
   img:focus {
     transform: rotate(-15deg);
-  }
-
-  ul {
-    display: flex;
-    gap: var(--spacing-24);
   }
 
   .active,

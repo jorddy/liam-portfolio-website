@@ -35,8 +35,7 @@
   --spacing-24: 2.4rem;
   --spacing-32: 3.2rem;
   --spacing-40: 4rem;
-
-  --radius-base: var(--spacing-12);
+  --spacing-60: 6rem;
 }
 
 html {
