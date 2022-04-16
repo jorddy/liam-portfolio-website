@@ -16,8 +16,8 @@
   section {
     display: grid;
     place-items: center;
-    min-height: 40vh;
     text-align: center;
+    padding: var(--spacing-90) 0;
   }
 
   p {
