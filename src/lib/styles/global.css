@@ -18,13 +18,14 @@
   --font-24: 2.4rem;
   --font-36: 3.6rem;
   --font-48: 4.8rem;
-  --font-68: 6.8rem;
+  --font-54: 5.4rem;
+  --font-scale-unit: 4vw;
 
   --colour-brand: hsl(42, 89%, 49%);
   --colour-bg: hsl(225, 39%, 17%);
   --colour-bg-muted: hsl(225, 39%, 7%);
-  --colour-accent: hsl(13, 71%, 60%);
-  --colour-accent-muted: hsl(13, 71%, 50%);
+  --colour-accent: hsl(10, 79%, 42%);
+  --colour-accent-muted: hsl(10, 79%, 32%);
   --colour-white: hsl(90, 7%, 94%);
 
   --spacing-4: 0.4rem;
@@ -36,6 +37,9 @@
   --spacing-32: 3.2rem;
   --spacing-40: 4rem;
   --spacing-60: 6rem;
+
+  --radius-base: var(--spacing-40);
+  --radius-btn: var(--spacing-20);
 }
 
 html {
@@ -63,10 +67,10 @@ h4 {
 }
 h1 {
   font-family: "Darker Grotesque", sans-serif;
-  font-size: var(--font-68);
+  font-size: clamp(var(--font-36), var(--font-scale-unit), var(--font-54));
 }
 h2 {
-  font-size: var(--font-48);
+  font-size: clamp(var(--font-36), var(--font-scale-unit), var(--font-48));
 }
 h3 {
   font-size: var(--font-36);
@@ -107,10 +111,20 @@ img {
 }
 
 .container {
-  width: min(90%, 1100px);
+  width: min(90%, 1200px);
   margin-inline: auto;
 }
 
 .flow > :where(:not(:first-child)) {
   margin-top: var(--flow-spacing, var(--spacing-12));
+}
+
+.btn {
+  background-color: var(--colour-accent);
+  padding: var(--spacing-16) var(--spacing-20);
+  border-bottom-right-radius: var(--radius-btn);
+  transition: 150ms ease-out;
+}
+.btn:hover {
+  background-color: var(--colour-accent-muted);
 }

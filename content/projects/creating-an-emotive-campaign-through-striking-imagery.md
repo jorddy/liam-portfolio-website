@@ -4,7 +4,8 @@ brand: "United League"
 summary: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
 labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
 et ea rebum. Stet clita kasd gubergren."
-image: "/united-league-hero.jpg"
+featured: true
+image: "/football-field.png"
 type: "Case Study"
 aim: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
 date: "03/21/22"

@@ -41,6 +41,7 @@ interface Project extends Markdown {
     title: string;
     brand: string;
     summary: string;
+    featured: boolean;
     image: string;
     type: string;
     aim: string;

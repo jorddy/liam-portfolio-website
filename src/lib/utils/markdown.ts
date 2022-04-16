@@ -8,7 +8,10 @@ export const getMarkdown = (folder: string) => {
 
   const projects = files.map(file => {
     const slug = file.replace(".md", "");
-    const rawFile = fs.readFileSync(path.resolve(`content/${file}`), "utf-8");
+    const rawFile = fs.readFileSync(
+      path.resolve(`content/${folder}/${file}`),
+      "utf-8"
+    );
     const parsedMarkdown = matter(rawFile);
 
     return {
