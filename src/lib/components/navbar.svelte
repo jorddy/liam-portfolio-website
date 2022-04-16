@@ -119,15 +119,11 @@
     button {
       display: block;
     }
-    img {
-      width: 6rem;
-      height: 6rem;
-    }
   }
 
   img {
-    width: 8rem;
-    height: 8rem;
+    width: 5rem;
+    height: 5rem;
     transition: 100ms ease-in-out;
   }
   img:hover,

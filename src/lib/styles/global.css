@@ -74,10 +74,10 @@ h2 {
   font-size: clamp(var(--font-36), var(--font-scale-unit), var(--font-48));
 }
 h3 {
-  font-size: var(--font-36);
+  font-size: clamp(var(--font-24), var(--font-scale-unit), var(--font-36));
 }
 h4 {
-  font-size: var(--font-24);
+  font-size: clamp(var(--font-18), var(--font-scale-unit), var(--font-24));
 }
 
 p {

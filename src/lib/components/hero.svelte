@@ -20,6 +20,12 @@
     padding: var(--spacing-90) 0;
   }
 
+  @media (max-width: 768px) {
+    section {
+      padding: var(--spacing-40) 0;
+    }
+  }
+
   p {
     max-width: 60ch;
     margin-inline: auto;
