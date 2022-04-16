@@ -2,6 +2,7 @@
 logo: "/liam-johnston-logo.svg"
 cv: "/liam-johnston-cv.pdf"
 navigation:
+  - "home"
   - "about"
   - "work"
   - "contact"

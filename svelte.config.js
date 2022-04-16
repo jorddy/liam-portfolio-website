@@ -9,8 +9,7 @@ const config = {
 
   kit: {
     adapter: adapter(),
-    prerender: { default: true },
-    browser: { hydrate: false, router: false }
+    prerender: { default: true }
   }
 };
 

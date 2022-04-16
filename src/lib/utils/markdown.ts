@@ -3,8 +3,8 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 
-export const getMarkdown = () => {
-  const files = fs.readdirSync(path.resolve("content"));
+export const getMarkdown = (folder: string) => {
+  const files = fs.readdirSync(path.resolve(`content/${folder}`));
 
   const projects = files.map(file => {
     const slug = file.replace(".md", "");
