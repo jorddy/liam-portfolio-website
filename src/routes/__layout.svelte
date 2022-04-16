@@ -14,6 +14,7 @@
   import { page } from "$app/stores";
   import Navbar from "$lib/components/navbar.svelte";
   import Footer from "$lib/components/footer.svelte";
+  import Transition from "$lib/components/transition.svelte";
 
   export let content: Site;
 </script>
@@ -29,8 +30,10 @@
 
 <Navbar {content} />
 
-<main class="container">
-  <slot />
-</main>
+<Transition url={$page.url.pathname}>
+  <main class="container">
+    <slot />
+  </main>
+</Transition>
 
 <Footer {content} />
