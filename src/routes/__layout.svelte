@@ -12,7 +12,6 @@
 <script lang="ts">
   import "$lib/styles/global.css";
   import { page } from "$app/stores";
-  import Navbar from "$lib/components/navbar.svelte";
   import Footer from "$lib/components/footer.svelte";
   import Transition from "$lib/components/transition.svelte";
   import SkipLink from "$lib/components/skip-link.svelte";
@@ -30,8 +29,6 @@
 </svelte:head>
 
 <SkipLink />
-
-<Navbar {content} />
 
 <Transition url={$page.url.pathname}>
   <main id="content" class="container">

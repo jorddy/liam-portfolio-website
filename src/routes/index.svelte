@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Navbar from "$lib/components/navbar.svelte";
   import Hero from "$lib/components/hero.svelte";
   import Profile from "$lib/components/profile.svelte";
   import ProjectCard from "$lib/components/project-card.svelte";
@@ -7,6 +8,8 @@
   export let featured: Project;
   export let projects: Project[];
 </script>
+
+<Navbar {content} />
 
 <Hero
   heading={content.data.heroHeading}

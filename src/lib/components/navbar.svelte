@@ -1,10 +1,11 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import Icon from "$lib/components/icon.svelte";
   import { fly } from "svelte/transition";
-  import Social from "./social.svelte";
+  import Icon from "$lib/components/icon.svelte";
+  import Social from "$lib/components/social.svelte";
 
   export let content: Site;
+  export let projectPage = false;
 
   let menuOpen = false;
 </script>
@@ -12,7 +13,9 @@
 <header class="container">
   <nav class="desktop-menu">
     {#each content.data.navigation as link}
-      <a href="#{link}" class:active={$page.url.hash === link}
+      <a
+        href={projectPage ? `/#${link}` : `#${link}`}
+        class:active={$page.url.hash === link}
         >{link.charAt(0).toUpperCase() + link.slice(1)}</a
       >
     {/each}
@@ -51,7 +54,9 @@
     </div>
     <div>
       {#each content.data.navigation as link}
-        <a href="#{link}" class:active={$page.url.hash === link}
+        <a
+          href={projectPage ? `/#${link}` : `#${link}`}
+          class:active={$page.url.hash === link}
           >{link.charAt(0).toUpperCase() + link.slice(1)}</a
         >
       {/each}
