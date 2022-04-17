@@ -26,7 +26,7 @@
       <Icon name="menu" width={32} height={32} colour="var(--colour-white)" />
     </button>
     <a href="/">
-      <img src={content.data.logo} alt="Liam Johnston logo" />
+      <img src={content.data.logo} alt="Liam Johnston logo" loading="lazy" />
     </a>
   </div>
 
@@ -79,7 +79,7 @@
   }
 
   .mobile-menu {
-    position: absolute;
+    position: fixed;
     padding: var(--spacing-40);
     left: 0;
     height: 100%;

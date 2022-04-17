@@ -4,7 +4,7 @@
   export let buttonText: string;
 </script>
 
-<section>
+<section class="animate-fade-up">
   <div class="container flow">
     <h1>{heading}</h1>
     <p>{description}</p>
@@ -17,7 +17,7 @@
     display: grid;
     place-items: center;
     text-align: center;
-    padding: var(--spacing-90) 0;
+    padding: var(--spacing-section) 0;
   }
 
   @media (max-width: 768px) {

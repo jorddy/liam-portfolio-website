@@ -9,6 +9,6 @@ export const get: RequestHandler = () => {
 
   return {
     status: 200,
-    body: { content, featured: featured[0] }
+    body: { content, featured: featured[0], projects }
   };
 };

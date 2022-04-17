@@ -1,9 +1,11 @@
 <script lang="ts">
-  import Featured from "$lib/components/featured.svelte";
   import Hero from "$lib/components/hero.svelte";
+  import Profile from "$lib/components/profile.svelte";
+  import ProjectCard from "$lib/components/project-card.svelte";
 
   export let content: Site;
   export let featured: Project;
+  export let projects: Project[];
 </script>
 
 <Hero
@@ -12,9 +14,26 @@
   buttonText={content.data.heroButton}
 />
 
-<p>Checkout my latest project</p>
+<section>
+  <p>Checkout my latest project</p>
+  <ProjectCard project={featured} featured={true} />
+</section>
 
-<Featured {featured} />
+<Profile
+  heading={content.data.aboutHeading}
+  subHeading={content.data.aboutSubHeading}
+  bio={content.data.aboutBio}
+  image={content.data.aboutImage}
+  logo={content.data.logo}
+/>
+
+<section>
+  <h2>My Work</h2>
+
+  {#each projects as project, index}
+    <ProjectCard {project} reverse={index % 2 === 0} />
+  {/each}
+</section>
 
 <style>
   p {

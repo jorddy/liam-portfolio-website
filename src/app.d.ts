@@ -26,7 +26,8 @@ interface Site extends Markdown {
     heroButton: string;
     aboutHeading: string;
     aboutSubHeading: string;
-    aboutDescription: string;
+    aboutBio: string;
+    aboutImage: string;
     footerHeading: string;
     footerEmail: string;
     footerCopyright: string;

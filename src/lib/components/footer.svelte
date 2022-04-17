@@ -25,7 +25,7 @@
     </div>
 
     <div class="footer-copyright">
-      <img src={content.data.logo} alt="Liam Johnston logo" />
+      <img src={content.data.logo} alt="Liam Johnston logo" loading="lazy" />
       <p>{content.data.footerCopyright}</p>
     </div>
   </div>
