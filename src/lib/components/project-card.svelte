@@ -5,7 +5,6 @@
 </script>
 
 <article
-  class="animate-fade-up"
   style:background-color={featured && "var(--colour-bg-muted)"}
   style:flex-direction={reverse && "row-reverse"}
   style:padding={featured && "var(--spacing-32)"}

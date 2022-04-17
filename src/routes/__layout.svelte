@@ -15,6 +15,7 @@
   import Navbar from "$lib/components/navbar.svelte";
   import Footer from "$lib/components/footer.svelte";
   import Transition from "$lib/components/transition.svelte";
+  import SkipLink from "$lib/components/skip-link.svelte";
 
   export let content: Site;
 </script>
@@ -28,7 +29,7 @@
   <link rel="canonical" href={$page.url.origin + $page.url.pathname} />
 </svelte:head>
 
-<a href="#content">Skip to Content</a>
+<SkipLink />
 
 <Navbar {content} />
 
@@ -39,18 +40,3 @@
 </Transition>
 
 <Footer {content} />
-
-<style>
-  a {
-    position: absolute;
-    transform: translateY(-100%);
-    transition: 150ms ease;
-    background-color: var(--colour-brand);
-    color: var(--colour-bg);
-    padding: var(--spacing-20);
-  }
-
-  a:focus {
-    transform: translateX(0);
-  }
-</style>
