@@ -19,10 +19,10 @@
 
 <style>
   article {
-    border-bottom-right-radius: var(--radius-base);
     display: flex;
     align-items: center;
     gap: var(--spacing-32);
+    border-bottom-right-radius: var(--radius-base);
   }
 
   @media (max-width: 1024px) {

@@ -33,17 +33,16 @@
   </div>
 </section>
 
-<section class="intro">
+<section class="intro flow">
   <h2>Aim of the project</h2>
   <p>{project.data.aim}</p>
-  <img src={project.data.image} alt={project.data.title} />
 </section>
 
 <article class="flow">
   {@html project.content}
 </article>
 
-<section class="outro">
+<section class="flow">
   <h2>Interested in reading more...</h2>
   <ProjectCard project={randomProject} featured={true} />
 </section>
@@ -52,9 +51,9 @@
   .hero {
     margin: var(--spacing-60) 0;
     padding: var(--spacing-60);
-    /* background-color: var(--colour-bg-muted); In case we dont want a background image */
   }
-  .hero > * {
+  .hero > *,
+  .intro > * {
     max-width: 75%;
   }
   .hero > h1 {
@@ -69,13 +68,31 @@
     font-weight: 600;
   }
 
+  @media (max-width: 768px) {
+    .hero {
+      margin: var(--spacing-32);
+      padding: var(--spacing-24);
+    }
+    .hero > *,
+    .intro > * {
+      max-width: 100%;
+    }
+    .hero > div {
+      flex-direction: column;
+    }
+    article {
+      margin: var(--spacing-32) 0;
+    }
+  }
+
   .flow {
     --flow-spacing: var(--spacing-32);
   }
 
-  .intro {
-  }
-
-  .outro {
+  article {
+    margin: var(--spacing-60) 0;
+    background-color: var(--colour-bg-muted);
+    padding: var(--spacing-24);
+    border-bottom-right-radius: var(--radius-base);
   }
 </style>
