@@ -4,7 +4,7 @@
   export let content: Site;
 </script>
 
-<footer>
+<footer id="contact">
   <div class="container flow">
     <h2>{content.data.footerHeading}</h2>
 
@@ -33,7 +33,7 @@
 
 <style>
   footer {
-    margin-top: var(--spacing-60);
+    margin-top: var(--spacing-section);
     padding: var(--spacing-32);
     background-color: var(--colour-bg-muted);
   }

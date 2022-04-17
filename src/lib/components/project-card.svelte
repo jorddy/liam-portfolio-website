@@ -8,18 +8,18 @@
   class="animate-fade-up"
   style:background-color={featured && "var(--colour-bg-muted)"}
   style:flex-direction={reverse && "row-reverse"}
+  style:padding={featured && "var(--spacing-32)"}
 >
-  <img src={project.data.image} alt={project.data.title} loading="lazy" />
   <div class="flow">
     <p>{project.data.brand} - {project.data.type}</p>
     <h3>{project.data.title}</h3>
     <a href="/{project.slug}">Read the case study</a>
   </div>
+  <img src={project.data.image} alt={project.data.title} loading="lazy" />
 </article>
 
 <style>
   article {
-    padding: var(--spacing-32);
     border-bottom-right-radius: var(--radius-base);
     display: flex;
     align-items: center;

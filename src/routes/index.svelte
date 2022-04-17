@@ -14,10 +14,8 @@
   buttonText={content.data.heroButton}
 />
 
-<section>
-  <p>Checkout my latest project</p>
-  <ProjectCard project={featured} featured={true} />
-</section>
+<p>Checkout my latest project</p>
+<ProjectCard project={featured} featured={true} />
 
 <Profile
   heading={content.data.aboutHeading}
@@ -27,12 +25,19 @@
   logo={content.data.logo}
 />
 
-<section>
+<section id="work">
   <h2>My Work</h2>
+  <img
+    class="floating-lion floating-lion-right"
+    src={content.data.logo}
+    alt="Liam Johnston logo"
+  />
 
-  {#each projects as project, index}
-    <ProjectCard {project} reverse={index % 2 === 0} />
-  {/each}
+  <div>
+    {#each projects as project, index}
+      <ProjectCard {project} reverse={index % 2 === 0} />
+    {/each}
+  </div>
 </section>
 
 <style>
@@ -41,5 +46,18 @@
     font-weight: 600;
     text-align: center;
     margin-bottom: var(--spacing-16);
+  }
+
+  section {
+    position: relative;
+  }
+
+  section > h2 {
+    margin-bottom: var(--spacing-90);
+  }
+
+  section > div {
+    display: grid;
+    gap: var(--spacing-90);
   }
 </style>

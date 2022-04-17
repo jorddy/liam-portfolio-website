@@ -111,6 +111,7 @@ img {
   height: auto;
 }
 
+/* Reusable Classes */
 .container {
   width: min(90%, 1200px);
   margin: 0 auto;
@@ -135,15 +136,17 @@ img {
   top: -8rem;
   z-index: -1;
   opacity: 0.2;
-  transform: rotate(15deg) scale(0.75);
 }
 .floating-lion-left {
   left: -70rem;
+  transform: rotate(15deg) scale(0.75);
 }
 .floating-lion-right {
-  right: -70rem;
+  right: -65rem;
+  transform: rotate(-15deg) scaleX(-1) scale(0.75);
 }
 
+/* Animtaion utils */
 .animate-fade-up {
   animation: fade-up 500ms linear;
 }
@@ -159,8 +162,15 @@ img {
   }
 }
 
+/* Global media preferences */
 @media (max-width: 768px) {
   :root {
     --spacing-section: var(--spacing-90);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
   }
 }

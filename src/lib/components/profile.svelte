@@ -6,7 +6,7 @@
   export let logo: string;
 </script>
 
-<section class="container">
+<section class="container" id="about">
   <img
     class="floating-lion floating-lion-left"
     src={logo}
@@ -27,6 +27,12 @@
     display: flex;
     align-items: center;
     gap: var(--spacing-90);
+  }
+
+  @media (max-width: 1024px) {
+    section {
+      flex-direction: column;
+    }
   }
 
   section > img:last-of-type {
