@@ -1,5 +1,5 @@
 ---
-title: "Using printed typography to convey and contrast the horrors of the Vietnam War & Woodstock"
+title: "Using printed typography to convey and contrast the horrors of the Vietnam War and Woodstock"
 brand: "Over The Fence"
 summary: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
 labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
