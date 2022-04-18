@@ -167,6 +167,9 @@ img {
   :root {
     --spacing-section: var(--spacing-90);
   }
+  .floating-lion {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion) {

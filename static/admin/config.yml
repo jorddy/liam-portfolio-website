@@ -1,0 +1,88 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+publish_mode: editorial_workflow
+
+media_folder: "static/images" # Media files will be stored in the repo under static/images
+public_folder: "/images" # The src attribute for uploaded media will begin with /images
+
+collections:
+  - name: "projects" # Used in routes, e.g., /admin/collections/blog
+    label: "Projects" # Used in the UI
+    folder: "content/projects" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Brand", name: "brand", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Featured", name: "featured", widget: "boolean" }
+      - { label: "Main Image", name: "image", widget: "image" }
+      - label: "Type of Project"
+        name: "type"
+        widget: "select"
+        options: ["Case Study", "Personal"]
+      - label: "Project Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "DD.MM.YYYY"
+      - { label: "Aim of the Project", name: "aim", widget: "text" }
+      - label: "Roles in the Project"
+        name: "roles"
+        widget: "list"
+        default: ["Marketing"]
+      - { label: "Content", name: "body", widget: "markdown" }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - name: "site" # Used in routes, e.g., /admin/collections/blog
+        label: "Home Page" # Used in the UI
+        file: "content/site.md"
+        fields: # The fields for each document, usually in front matter
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "CV", name: "cv", widget: "file" }
+          - label: "Navigation"
+            name: "navigation"
+            widget: "list"
+            default: ["home", "about", "work", "contact"]
+          - { label: "Instagram Link", name: "instagram", widget: "string" }
+          - { label: "Linkedin Link", name: "linkedin", widget: "string" }
+          - { label: "Hero Heading", name: "heroHeading", widget: "string" }
+          - {
+              label: "Hero Description",
+              name: "heroDescription",
+              widget: "text"
+            }
+          - { label: "Hero Button", name: "heroButton", widget: "string" }
+          - { label: "About Heading", name: "aboutHeading", widget: "string" }
+          - {
+              label: "About Sub-Heading",
+              name: "aboutSubHeading",
+              widget: "string"
+            }
+          - { label: "About Biography", name: "aboutBio", widget: "text" }
+          - { label: "About Image", name: "aboutImage", widget: "image" }
+          - { label: "Footer Heading", name: "footerHeading", widget: "string" }
+          - { label: "Footer Email", name: "footerEmail", widget: "string" }
+          - {
+              label: "Footer Copyright",
+              name: "footerCopyright",
+              widget: "string"
+            }
+          - {
+              label: "Footer Location",
+              name: "footerLocation",
+              widget: "string"
+            }
+          - {
+              label: "Footer Sub-Heading",
+              name: "footerSubHeading",
+              widget: "string"
+            }
+          - {
+              label: "Footer Description",
+              name: "footerDescription",
+              widget: "text"
+            }

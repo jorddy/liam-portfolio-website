@@ -12,7 +12,7 @@
   <div class="flow">
     <p>{project.data.brand} - {project.data.type}</p>
     <h3>{project.data.title}</h3>
-    <a href="/{project.slug}">Read the case study</a>
+    <a href="/projects/{project.slug}">Read the case study</a>
   </div>
   <img src={project.data.image} alt={project.data.title} loading="lazy" />
 </article>
@@ -26,8 +26,8 @@
   }
 
   @media (max-width: 1024px) {
-    article {
-      flex-direction: column;
+    :where(article) {
+      flex-direction: column !important;
     }
   }
 

@@ -31,7 +31,7 @@
 <SkipLink />
 
 <Transition url={$page.url.pathname}>
-  <main id="content" class="container">
+  <main class="container" id="content">
     <slot />
   </main>
 </Transition>

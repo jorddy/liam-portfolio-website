@@ -6,7 +6,7 @@
   export let logo: string;
 </script>
 
-<section class="container" id="about">
+<section id="about">
   <img
     class="floating-lion floating-lion-left"
     src={logo}

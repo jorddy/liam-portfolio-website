@@ -5,7 +5,7 @@
 </script>
 
 <section id="home" class="animate-fade-up">
-  <div class="container flow">
+  <div class="flow">
     <h1>{heading}</h1>
     <p>{description}</p>
     <a class="btn" href="#work">{buttonText}</a>

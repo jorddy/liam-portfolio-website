@@ -24,7 +24,7 @@
   <div>
     <div>
       <p>Timeline</p>
-      <p>{project.data.date}</p>
+      <p>{new Date(project.data.date).toLocaleDateString()}</p>
     </div>
     <div>
       <p>Project Roles</p>
@@ -33,7 +33,7 @@
   </div>
 </section>
 
-<section class="intro flow">
+<section class="flow">
   <h2>Aim of the project</h2>
   <p>{project.data.aim}</p>
 </section>
@@ -52,10 +52,6 @@
     margin: var(--spacing-60) 0;
     padding: var(--spacing-60);
   }
-  .hero > *,
-  .intro > * {
-    max-width: 75%;
-  }
   .hero > h1 {
     color: var(--colour-brand);
   }
@@ -73,10 +69,6 @@
       margin: var(--spacing-32);
       padding: var(--spacing-24);
     }
-    .hero > *,
-    .intro > * {
-      max-width: 100%;
-    }
     .hero > div {
       flex-direction: column;
     }
@@ -92,7 +84,7 @@
   article {
     margin: var(--spacing-60) 0;
     background-color: var(--colour-bg-muted);
-    padding: var(--spacing-24);
+    padding: var(--spacing-32);
     border-bottom-right-radius: var(--radius-base);
   }
 </style>
