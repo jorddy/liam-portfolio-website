@@ -34,7 +34,6 @@ collections:
         label: "Home Page" # Used in the UI
         file: "content/site.md"
         fields: # The fields for each document, usually in front matter
-          - { label: "Title", name: "title", widget: "string" }
           - { label: "Logo", name: "logo", widget: "image" }
           - { label: "CV", name: "cv", widget: "file" }
           - { label: "Navigation", name: "navigation", widget: "list" }
