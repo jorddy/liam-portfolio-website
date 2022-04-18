@@ -7,8 +7,8 @@ et ea rebum. Stet clita kasd gubergren."
 featured: false
 image: "/football-field.png"
 type: "Case Study"
-aim: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
 date: "09/21/21"
+aim: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
 roles:
   - "Copywrighter"
   - "Editorial"
