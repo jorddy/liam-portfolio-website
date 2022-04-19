@@ -87,8 +87,8 @@
     position: fixed;
     padding: var(--spacing-40);
     left: 0;
+    top: 0;
     height: 100%;
-    max-width: 100%;
     background-color: var(--colour-bg-muted);
     z-index: 1;
   }
