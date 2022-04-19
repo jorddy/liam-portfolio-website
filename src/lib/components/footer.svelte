@@ -34,7 +34,6 @@
 <style>
   footer {
     margin-top: var(--spacing-section);
-    padding: var(--spacing-32);
     background-color: var(--colour-bg-muted);
   }
 

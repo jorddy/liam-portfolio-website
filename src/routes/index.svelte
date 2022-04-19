@@ -17,37 +17,39 @@
 
 <Navbar {content} />
 
-<Hero
-  heading={content.data.heroHeading}
-  description={content.data.heroDescription}
-  buttonText={content.data.heroButton}
-/>
-
-<p>Checkout my latest project</p>
-<ProjectCard project={featured} featured={true} />
-
-<Profile
-  heading={content.data.aboutHeading}
-  subHeading={content.data.aboutSubHeading}
-  bio={content.data.aboutBio}
-  image={content.data.aboutImage}
-  logo={content.data.logo}
-/>
-
-<section id="work">
-  <h2>My Work</h2>
-  <img
-    class="floating-lion floating-lion-right"
-    src={content.data.logo}
-    alt="Liam Johnston logo"
+<main class="container" id="content">
+  <Hero
+    heading={content.data.heroHeading}
+    description={content.data.heroDescription}
+    buttonText={content.data.heroButton}
   />
 
-  <div>
-    {#each projects as project, index}
-      <ProjectCard {project} reverse={index % 2 === 0} />
-    {/each}
-  </div>
-</section>
+  <p>Checkout my latest project</p>
+  <ProjectCard project={featured} featured={true} />
+
+  <Profile
+    heading={content.data.aboutHeading}
+    subHeading={content.data.aboutSubHeading}
+    bio={content.data.aboutBio}
+    image={content.data.aboutImage}
+    logo={content.data.logo}
+  />
+
+  <section id="work">
+    <h2>My Work</h2>
+    <img
+      class="floating-lion floating-lion-right"
+      src={content.data.logo}
+      alt="Liam Johnston logo"
+    />
+
+    <div>
+      {#each projects as project, index}
+        <ProjectCard {project} reverse={index % 2 === 0} />
+      {/each}
+    </div>
+  </section>
+</main>
 
 <style>
   p {
@@ -62,7 +64,7 @@
   }
 
   section > h2 {
-    margin-bottom: var(--spacing-90);
+    margin-bottom: var(--spacing-40);
   }
 
   section > div {

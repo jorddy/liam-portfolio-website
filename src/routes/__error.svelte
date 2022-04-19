@@ -12,7 +12,7 @@
   export let title: string;
 </script>
 
-<main>
+<main class="container" id="content">
   <div class="container flow">
     <h1>Oops, it appears you've encountered an error</h1>
     <p>{title}</p>

@@ -113,7 +113,8 @@ img {
 
 /* Reusable Classes */
 .container {
-  width: min(90%, 1200px);
+  max-width: 1200px;
+  padding: 2rem;
   margin: 0 auto;
 }
 

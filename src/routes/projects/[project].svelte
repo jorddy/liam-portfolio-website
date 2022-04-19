@@ -14,43 +14,45 @@
 
 <Navbar {content} projectPage={true} />
 
-<section
-  class="hero animate-fade-up flow"
-  style:background={`linear-gradient(hsla(225, 5%, 15%, 0.8), hsla(225, 5%, 15%, 0.8)), url(${project.data.image})`}
-  style:background-size="cover"
->
-  <h1>{project.data.title} - {project.data.brand}</h1>
-  <p>{project.data.summary}</p>
-  <div>
+<main class="container" id="content">
+  <section
+    class="hero animate-fade-up flow"
+    style:background={`linear-gradient(hsla(225, 5%, 15%, 0.8), hsla(225, 5%, 15%, 0.8)), url(${project.data.image})`}
+    style:background-size="cover"
+  >
+    <h1>{project.data.title} - {project.data.brand}</h1>
+    <p>{project.data.summary}</p>
     <div>
-      <p>Timeline</p>
-      <p>{new Date(project.data.date).toLocaleDateString()}</p>
+      <div>
+        <p>Timeline</p>
+        <p>{new Date(project.data.date).toLocaleDateString()}</p>
+      </div>
+      <div>
+        <p>Project Roles</p>
+        <p>{project.data.roles.join(", ")}</p>
+      </div>
     </div>
-    <div>
-      <p>Project Roles</p>
-      <p>{project.data.roles.join(", ")}</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="flow">
-  <h2>Aim of the project</h2>
-  <p>{project.data.aim}</p>
-</section>
+  <section class="flow">
+    <h2>Aim of the project</h2>
+    <p>{project.data.aim}</p>
+  </section>
 
-<article class="flow">
-  {@html project.content}
-</article>
+  <article class="flow">
+    {@html project.content}
+  </article>
 
-<section class="flow">
-  <h2>Interested in reading more...</h2>
-  <ProjectCard project={randomProject} featured={true} />
-</section>
+  <section class="flow">
+    <h3>See more of my work...</h3>
+    <ProjectCard project={randomProject} featured={true} />
+  </section>
+</main>
 
 <style>
   .hero {
-    margin: var(--spacing-90) 0;
-    padding: var(--spacing-60);
+    margin-bottom: var(--spacing-60);
+    padding: var(--spacing-32);
   }
   .hero > h1 {
     color: var(--colour-brand);
@@ -65,9 +67,6 @@
   }
 
   @media (max-width: 768px) {
-    .hero {
-      margin-top: var(--spacing-32);
-    }
     .hero > div {
       flex-direction: column;
     }
@@ -78,9 +77,6 @@
   }
 
   article {
-    margin: var(--spacing-90) 0;
-    background-color: var(--colour-bg-muted);
-    padding: var(--spacing-32);
-    border-bottom-right-radius: var(--radius-base);
+    margin: var(--spacing-60) 0;
   }
 </style>

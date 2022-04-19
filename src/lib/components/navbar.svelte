@@ -10,7 +10,7 @@
   let menuOpen = false;
 </script>
 
-<header>
+<header class="container">
   <nav class="desktop-menu">
     {#each content.data.navigation as link}
       <a
