@@ -32,7 +32,7 @@
   h1 {
     color: var(--colour-brand);
     border: 6px solid var(--colour-brand);
-    padding: var(--spacing-20) var(--spacing-12);
+    padding: var(--spacing-20) var(--spacing-32);
     border-bottom-right-radius: var(--radius-base);
   }
 

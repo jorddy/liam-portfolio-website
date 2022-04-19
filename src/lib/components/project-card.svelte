@@ -7,7 +7,7 @@
 <article
   style:background-color={featured && "var(--colour-bg-muted)"}
   style:flex-direction={reverse && "row-reverse"}
-  style:padding={featured && "var(--spacing-32)"}
+  style:padding={featured && "var(--spacing-60)"}
 >
   <div class="flow">
     <p>{project.data.brand} - {project.data.type}</p>

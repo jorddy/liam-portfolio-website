@@ -49,7 +49,7 @@
 
 <style>
   .hero {
-    margin: var(--spacing-60) 0;
+    margin: var(--spacing-90) 0;
     padding: var(--spacing-60);
   }
   .hero > h1 {
@@ -66,14 +66,10 @@
 
   @media (max-width: 768px) {
     .hero {
-      margin: var(--spacing-32);
-      padding: var(--spacing-24);
+      margin-top: var(--spacing-32);
     }
     .hero > div {
       flex-direction: column;
-    }
-    article {
-      margin: var(--spacing-32) 0;
     }
   }
 
@@ -82,7 +78,7 @@
   }
 
   article {
-    margin: var(--spacing-60) 0;
+    margin: var(--spacing-90) 0;
     background-color: var(--colour-bg-muted);
     padding: var(--spacing-32);
     border-bottom-right-radius: var(--radius-base);
