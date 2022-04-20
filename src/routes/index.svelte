@@ -3,7 +3,6 @@
   import Hero from "$lib/components/hero.svelte";
   import Profile from "$lib/components/profile.svelte";
   import ProjectCard from "$lib/components/project-card.svelte";
-  import { onMount } from "svelte";
 
   export let content: Site;
   export let featured: Project;

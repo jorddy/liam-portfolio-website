@@ -19,6 +19,7 @@
         >{link.charAt(0).toUpperCase() + link.slice(1)}</a
       >
     {/each}
+    <a rel="external" href={content.data.cv}>CV</a>
   </nav>
 
   <div>
@@ -137,7 +138,8 @@
   }
 
   .active,
-  a:hover {
+  a:hover,
+  a:focus {
     color: var(--colour-brand);
     text-decoration: underline;
   }
