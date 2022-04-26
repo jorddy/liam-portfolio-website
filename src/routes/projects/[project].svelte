@@ -52,7 +52,7 @@
 <style>
   .hero {
     margin-bottom: var(--spacing-60);
-    padding: var(--spacing-32);
+    padding: var(--spacing-60);
   }
   .hero > h1 {
     color: var(--colour-brand);
@@ -67,6 +67,9 @@
   }
 
   @media (max-width: 768px) {
+    .hero {
+      padding: var(--spacing-32);
+    }
     .hero > div {
       flex-direction: column;
     }
@@ -77,6 +80,6 @@
   }
 
   article {
-    margin: var(--spacing-60) 0;
+    margin: var(--spacing-section) 0;
   }
 </style>

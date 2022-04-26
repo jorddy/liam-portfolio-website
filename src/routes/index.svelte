@@ -52,7 +52,7 @@
 
 <style>
   p {
-    font-size: var(--font-20);
+    font-size: var(--font-24);
     font-weight: 600;
     text-align: center;
     margin-bottom: var(--spacing-16);
