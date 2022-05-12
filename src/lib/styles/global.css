@@ -55,6 +55,7 @@ body {
   font-size: var(--font-18);
   line-height: 1.5;
   min-height: 100vh;
+  overflow-x: hidden;
 
   display: grid;
   grid-template-rows: auto 1fr auto;
