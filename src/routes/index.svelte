@@ -43,6 +43,7 @@
       {/each}
     </div>
   </section>
+  "@fontsource/darker-grotesque": "^4.5.6", "@fontsource/jost": "^4.5.6",
 </main>
 
 <style>
