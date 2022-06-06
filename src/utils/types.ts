@@ -1,20 +1,9 @@
-/// <reference types="@sveltejs/kit" />
-
-// See https://kit.svelte.dev/docs/types#the-app-namespace
-// for information about these interfaces
-declare namespace App {
-  // interface Locals {}
-  // interface Platform {}
-  // interface Session {}
-  // interface Stuff {}
-}
-
-interface Markdown {
+export interface Markdown {
   slug: string;
   content: string;
 }
 
-interface Site extends Markdown {
+export interface Site extends Markdown {
   data: {
     logo: string;
     cv: string;
@@ -37,7 +26,7 @@ interface Site extends Markdown {
   };
 }
 
-interface Project extends Markdown {
+export interface Project extends Markdown {
   data: {
     title: string;
     brand: string;
