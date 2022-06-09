@@ -1,6 +1,6 @@
 ---
-logo: "/liam-johnston-logo.svg"
-cv: "/liam-johnston-cv.pdf"
+logo: "/images/logo.svg"
+cv: "/cv.pdf"
 navigation:
   - "home"
   - "about"
@@ -14,7 +14,7 @@ heroButton: "View my work"
 aboutHeading: "Who am I?"
 aboutSubHeading: "A Newcastle-Upon-Tyne based marketing designer currently looking for my next big role"
 aboutBio: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr."
-aboutImage: "/me.png"
+aboutImage: "/images/me.png"
 footerHeading: "Let’s talk"
 footerEmail: "liamjohnston@hotmail.com"
 footerCopyright: "© Copyright 2022, Liam Johnston Design"
