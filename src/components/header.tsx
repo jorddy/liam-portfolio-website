@@ -76,15 +76,15 @@ export default function Header({
           </div>
           <div className='mt-12 grid gap-12'>
             {site.data.navigation.map((link, idx) => (
-              <a
-                key={idx}
-                href={projectPage ? `/#${link}` : `#${link}`}
-                className={`text-2xl hover:text-yellow-400 hover:underline ${
-                  hash === active ? active : ""
-                }`}
-              >
-                {link.charAt(0).toUpperCase() + link.slice(1)}
-              </a>
+              <Link key={idx} href={projectPage ? `/#${link}` : `#${link}`}>
+                <a
+                  className={`text-2xl hover:text-yellow-400 hover:underline ${
+                    hash === active ? active : ""
+                  }`}
+                >
+                  {link.charAt(0).toUpperCase() + link.slice(1)}
+                </a>
+              </Link>
             ))}
           </div>
         </nav>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Project } from "@/utils/types";
+import Link from "next/link";
 
 export default function ProjectCard({
   project,
@@ -21,12 +22,11 @@ export default function ProjectCard({
         <h3 className='max-w-2xl md:text-4xl md:leading-[1.5]'>
           {project.data.title}
         </h3>
-        <a
-          href={`/projects/${project.slug}`}
-          className='block text-xl text-yellow-400 underline'
-        >
-          Read the case study
-        </a>
+        <Link href={`/projects/${project.slug}`}>
+          <a className='block text-xl text-yellow-400 underline'>
+            Read the case study
+          </a>
+        </Link>
       </div>
       <Image
         src={project.data.image}
