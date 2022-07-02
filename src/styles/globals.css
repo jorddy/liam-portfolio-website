@@ -27,7 +27,7 @@ h4 {
 }
 
 .btn {
-  @apply bg-red-500 py-4 px-6 transition;
+  @apply bg-red-600 py-4 px-6 transition;
   border-bottom-right-radius: 2rem;
 }
 .btn:hover {

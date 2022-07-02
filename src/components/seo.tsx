@@ -1,15 +1,13 @@
 import Head from "next/head";
+import { FC } from "react";
 import { useRouter } from "next/router";
 
-export default function SEO({
+const SEO: FC<{ title?: string; description?: string }> = ({
   title,
   description
-}: {
-  title?: string;
-  description?: string;
-}) {
+}) => {
   const router = useRouter();
-  const canonical = "https://liamjohnston.netlify.app" + router.pathname;
+  const canonical = "https://liamjohnston.vercel.app" + router.pathname;
   const titleMeta = title ? title : "Liam Johnston - Creative Marketer";
   const descriptionMeta = description
     ? description
@@ -36,4 +34,6 @@ export default function SEO({
       <link rel='icon' href='/images/logo.svg' />
     </Head>
   );
-}
+};
+
+export default SEO;
