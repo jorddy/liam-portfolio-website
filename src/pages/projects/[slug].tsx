@@ -1,8 +1,9 @@
+import Layout from "@/components/layout";
+import ProjectCard from "@/components/project-card";
+import { FC } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getMarkdown, getSingleMarkdown } from "@/utils/markdown";
 import { Project, Site } from "@/utils/types";
-import Layout from "@/components/layout";
-import ProjectCard from "@/components/project-card";
 
 export const getStaticPaths: GetStaticPaths = () => {
   const projects = getMarkdown("projects");
@@ -27,15 +28,11 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
   };
 };
 
-export default function SingleProject({
-  site,
-  project,
-  randomProject
-}: {
+const SingleProject: FC<{
   site: Site;
   project: Project;
   randomProject: Project;
-}) {
+}> = ({ site, project, randomProject }) => {
   return (
     <Layout
       title={`${project.data.title} | Liam Johnston Creative Marketer`}
@@ -44,23 +41,22 @@ export default function SingleProject({
       projectPage={true}
     >
       <section
-        className='my-16 p-12 space-y-6 animate-fade-up md:p-24'
+        className='my-16 p-8 space-y-6 animate-fade-up bg-cover md:p-24'
         style={{
-          background: `linear-gradient(hsla(225, 5%, 15%, 0.8), hsla(225, 5%, 15%, 0.8)), url(${project.data.image})`,
-          backgroundSize: "cover"
+          background: `linear-gradient(hsla(225, 5%, 15%, 0.8), hsla(225, 5%, 15%, 0.8)), url(${project.data.image})`
         }}
       >
-        <h1 className='text-yellow-400'>
+        <h1 className='text-yellow-500'>
           {project.data.title} - {project.data.brand}
         </h1>
         <p>{project.data.summary}</p>
         <div className='flex flex-col gap-12 md:flex-row'>
           <div>
-            <p className='text-yellow-400 font-semibold'>Timeline</p>
+            <p className='text-yellow-500 font-semibold'>Timeline</p>
             <p>{new Date(project.data.date).toLocaleDateString()}</p>
           </div>
           <div>
-            <p className='text-yellow-400 font-semibold'>Project Roles</p>
+            <p className='text-yellow-500 font-semibold'>Project Roles</p>
             <p>{project.data.roles.join(", ")}</p>
           </div>
         </div>
@@ -82,4 +78,6 @@ export default function SingleProject({
       </section>
     </Layout>
   );
-}
+};
+
+export default SingleProject;

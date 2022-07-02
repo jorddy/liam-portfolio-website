@@ -9,7 +9,7 @@ navigation:
 instagram: "https://www.instagram.com/liamjohnstondesign/"
 linkedin: "https://www.linkedin.com/in/liam-johnston-7974861b4/"
 heroHeading: "Hi I’m Liam, a creative marketing designer"
-heroDescription: "I’m passionate about pushing the limits of brands through creative marketing strategies and striking design."
+heroDescription: "Based in Newcastle-Upon-Tyne, I’m passionate about pushing the limits of brands through creative marketing strategies and striking design."
 heroButton: "View my work"
 aboutHeading: "Who am I?"
 aboutSubHeading: "A Newcastle-Upon-Tyne based marketing designer currently looking for my next big role"

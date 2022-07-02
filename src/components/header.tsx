@@ -1,37 +1,42 @@
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { Site } from "@/utils/types";
-import { BiMenuAltLeft, BiX } from "react-icons/bi";
-import Social from "./social";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/future/image";
+import Social from "./social";
+import { useRouter } from "next/router";
+import { FC, useState } from "react";
+import { BiMenuAltLeft, BiX } from "react-icons/bi";
+import { Site } from "@/utils/types";
 
-export default function Header({
+const Header: FC<{ site: Site; projectPage: boolean }> = ({
   site,
   projectPage
-}: {
-  site: Site;
-  projectPage: boolean;
-}) {
+}) => {
   const router = useRouter();
   const hash = router.asPath.split("#")[1];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const active = "text-yellow-400 underline";
+  const active = "text-yellow-500 underline";
 
   return (
     <>
       <header className='container mt-12 flex justify-between items-center'>
-        <nav className='hidden md:flex md:gap-10'>
+        <nav className='hidden gap-8 items-center md:flex'>
+          <Link href='/' aria-label='Back to home'>
+            <Image
+              className='h-16 transition hover:-rotate-12'
+              src={site.data.logo}
+              alt='Liam Johnston logo'
+            />
+          </Link>
+
           {site.data.navigation.map((link, idx) => (
-            <Link key={idx} href={projectPage ? `/#${link}` : `#${link}`}>
-              <a
-                className={`hover:text-yellow-400 hover:underline ${
-                  hash === active ? active : ""
-                }`}
-              >
-                {link.charAt(0).toUpperCase() + link.slice(1)}
-              </a>
+            <Link
+              key={idx}
+              href={projectPage ? `/#${link}` : `#${link}`}
+              className={`hover:text-yellow-500 hover:underline ${
+                hash === active ? active : ""
+              }`}
+            >
+              {link.charAt(0).toUpperCase() + link.slice(1)}
             </Link>
           ))}
           <a rel='external' href={site.data.cv}>
@@ -39,26 +44,23 @@ export default function Header({
           </a>
         </nav>
 
-        <div className='flex items-center gap-10'>
+        <div className='flex items-center justify-between gap-4 md:hidden'>
           <button
-            className='cursor-pointer transition hover:rotate-12 md:hidden'
+            className='cursor-pointer transition hover:rotate-12'
             onClick={() => setIsMenuOpen(true)}
             aria-label='Open the mobile menu'
           >
             <BiMenuAltLeft size={40} className='text-white' />
           </button>
-          <Link href='/'>
-            <a aria-label='Back to home'>
-              <Image
-                className='w-20 h-20 transition hover:-rotate-12'
-                src={site.data.logo}
-                alt='Liam Johnston logo'
-                width={60}
-                height={60}
-              />
-            </a>
+          <Link href='/' aria-label='Back to home'>
+            <Image
+              className='h-16 transition hover:-rotate-12'
+              src={site.data.logo}
+              alt='Liam Johnston logo'
+            />
           </Link>
         </div>
+
         <Social instagram={site.data.instagram} linkedin={site.data.linkedin} />
       </header>
 
@@ -76,14 +78,14 @@ export default function Header({
           </div>
           <div className='mt-12 grid gap-12'>
             {site.data.navigation.map((link, idx) => (
-              <Link key={idx} href={projectPage ? `/#${link}` : `#${link}`}>
-                <a
-                  className={`text-2xl hover:text-yellow-400 hover:underline ${
-                    hash === active ? active : ""
-                  }`}
-                >
-                  {link.charAt(0).toUpperCase() + link.slice(1)}
-                </a>
+              <Link
+                key={idx}
+                href={projectPage ? `/#${link}` : `#${link}`}
+                className={`text-2xl hover:text-yellow-500 hover:underline ${
+                  hash === active ? active : ""
+                }`}
+              >
+                {link.charAt(0).toUpperCase() + link.slice(1)}
               </Link>
             ))}
           </div>
@@ -91,4 +93,6 @@ export default function Header({
       )}
     </>
   );
-}
+};
+
+export default Header;

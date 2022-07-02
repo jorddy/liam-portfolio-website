@@ -1,10 +1,12 @@
-import { GetStaticProps } from "next";
-import { getMarkdown, getSingleMarkdown } from "@/utils/markdown";
-import { Project, Site } from "@/utils/types";
 import Layout from "@/components/layout";
 import ProjectCard from "@/components/project-card";
 import Hero from "@/components/hero";
 import Profile from "@/components/profile";
+import Image from "next/future/image";
+import { FC } from "react";
+import { GetStaticProps } from "next";
+import { getMarkdown, getSingleMarkdown } from "@/utils/markdown";
+import { Project, Site } from "@/utils/types";
 
 export const getStaticProps: GetStaticProps = () => {
   const site = getSingleMarkdown("site");
@@ -16,15 +18,11 @@ export const getStaticProps: GetStaticProps = () => {
   };
 };
 
-export default function Index({
+const Index: FC<{ site: Site; featured: Project; projects: Project[] }> = ({
   site,
   featured,
   projects
-}: {
-  site: Site;
-  featured: Project;
-  projects: Project[];
-}) {
+}) => {
   return (
     <Layout site={site} projectPage={false}>
       <Hero
@@ -48,7 +46,7 @@ export default function Index({
 
       <section id='work' className='relative'>
         <h2 className='mb-12'>My Work</h2>
-        <img
+        <Image
           className='hidden absolute opacity-20 -rotate-12 -scale-x-100 -right-[35rem] 
           w-[50rem] h-[50rem] md:block'
           src={site.data.logo}
@@ -63,4 +61,6 @@ export default function Index({
       </section>
     </Layout>
   );
-}
+};
+
+export default Index;

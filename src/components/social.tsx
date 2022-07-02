@@ -1,19 +1,17 @@
+import { FC } from "react";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export default function Social({
+const Social: FC<{ instagram: string; linkedin: string }> = ({
   instagram,
   linkedin
-}: {
-  instagram: string;
-  linkedin: string;
-}) {
+}) => {
   return (
     <ul className='flex gap-6'>
       <li>
         <a
           rel='external'
           href={instagram}
-          className='transition hover:text-yellow-400 hover:underline'
+          className='transition hover:text-yellow-500 hover:underline'
           aria-label='Link to my Instagram page'
         >
           <FaInstagram size={28} />
@@ -23,7 +21,7 @@ export default function Social({
         <a
           rel='external'
           href={linkedin}
-          className='transition hover:text-yellow-400 hover:underline'
+          className='transition hover:text-yellow-500 hover:underline'
           aria-label='Link to my Instagram page'
         >
           <FaLinkedin size={28} />
@@ -31,4 +29,6 @@ export default function Social({
       </li>
     </ul>
   );
-}
+};
+
+export default Social;
